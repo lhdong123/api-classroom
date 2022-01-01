@@ -31,8 +31,8 @@ async function configEmailToSend1 (account, OTP) {
 
 exports.sendmail = async (email,content) => {
     
-    //console.log("sendmail");
-    //console.log(email);
+    console.log("sendmail");
+    console.log(email);
     const mailer = await configEmailToSend(email,content);
     const smtpTransport = (await mailer).smtpTransport;
     const mail = (await mailer).mail;
